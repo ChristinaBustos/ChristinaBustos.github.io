@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Masa Corporal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <style>
+    .amarillo{
+        background-color: yellow !important
+    }
+    .verde{
+        background-color: green!important
+    }
+    .naranja{
+        background-color: orange!important
+    }
+    .rojo{
+        background-color: red!important
+    }
+    .sin-Color{
+        background-color: rgb(101, 101, 101)!important
+    }
+  </style>
+  <body>
+    <div class="mx-5">
+        <div class="">
+            <h1>Obtener Masa corporal</h1>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <form onsubmit="(event)=>calcularMasa(event)">
+                    <div class="mb-3">
+                      <label for="kg" class="form-label"><b>KG</b> </label>
+                      <input type="number" id="kg" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <div  class="form-text">Recuerda que solo números</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mt" class="form-label"><b> Mtr</b> </label>
+                        <input type="number" id="mt" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div  class="form-text">Recuerda que solo números</div>
+                      </div>
+                    <button type="button" class="btn btn-primary" onclick="calcularMasa()" >Calcular</button>
+                  </form>
+            </div>
+            <div class="col-6">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Nivel Obtenido</th>
+                    <th scope="col">Color</th>
+                  </tr>
+                </thead>
+                <tbody id="contenido">
+                  <tr>
+                    <td>Bajo peso</td>
+                    <td id="amarillo" class="sin-Color">...</td>
+                  </tr>
+                  <tr>
+                    <td>Normal</td>
+                    <td id="verde" class="sin-Color">...</td>
+                  </tr>
+                  <tr>
+                    <td>Sobre peso</td>
+                    <td id="naranja" class="sin-Color">...</td>
+                  </tr>
+                  <tr>
+                    <td>Obesidad</td>
+                    <td id="rojo" class="sin-Color">...</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="controller.js"></script>
+  </body>
+</html>
